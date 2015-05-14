@@ -1,0 +1,7 @@
+{
+  "name": "emerald",
+  "description": "A barebones Node.js app using Express 4",
+  "repository": "https://github.com/pmabres/emerald2dweb",
+  "logo": "http://emerald.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "static"]
+}
