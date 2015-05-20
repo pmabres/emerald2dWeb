@@ -1,0 +1,23 @@
+<div class="grid-body">
+    <div loader="usersGrid" loader-container=".k-grid"></div>
+    <div class="userContainer" authorize="user"  permission="read" unauth-redirect="permissionDenied" >
+        <div class="grid-body">
+            <div id="userGrid"
+                 kendo-grid="userGrid"
+                 k-data-source='userView.data'
+                 k-options="userView.options"
+                 k-columns="userView.columnsDefault"
+                 k-toolbar="userView.toolbar"
+                 k-rebind="userView.columnsDefault"
+                 k-on-change="userView.change(data)"
+                 user-edit="userView.selectedData"
+                 user-edit-do="userView.refresh(result)"
+                 template-on="dblclick"
+                 excel="{allPages:true,fileName:'Xyicon_Export_{{sysdate | date:'MM-dd-yyyy h:mma'}}.xlsx'}"
+                 k-on-data-bound="userView.onDataBound(this,$event)">
+            </div>
+        </div>
+        <div class="grid-footer">
+        </div>
+    </div>
+</div>

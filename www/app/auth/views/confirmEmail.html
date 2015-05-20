@@ -1,0 +1,69 @@
+<div class="col-md-8 col-md-offset-2 text-center">
+    <div class="box-login" id="confirmEmailBox">
+        <div class="spaceRunnerLogo"></div>
+        <div class="loginSuperContainer" >
+            <div loader="confirmEmail"></div>
+            <div data-ng-hide="isEmailTokenValid">
+            <p> Email link invalid, click below to go login help page </p>
+                <a class="btn btn-md btn-info btn-block" ng-click="go('forgotPassword')">Login help page</a>
+            </div>
+            <div data-ng-show="isEmailTokenValid">
+                <form class="form-login" role="form" name="formConfirm" id="formConfirm" validate-group novalidate>
+                    <div class="LoginContainer" >
+
+                        <h4 class="form-login-heading">Get Ready to Launch</h4>
+                        <div class="xyicon-input-group">
+                            <input validate-required id="FirstName" name="FirstName" type="text" class="xyicon-input-field" data-ng-model="confirmData.FirstName" autofocus>
+                            <span class="xyicon-input-field-bar"></span>
+                            <label class="label-sa" for="FirstName">First Name <span style="color:red;">*</span></label>
+                        </div>
+                        <div class="xyicon-input-group">
+                            <input validate-required id="LastName" name="LastName" type="text" class="xyicon-input-field" data-ng-model="confirmData.LastName">
+                            <span class="xyicon-input-field-bar"></span>
+                            <label class="label-sa"for="LastName">Last Name <span style="color:red;">*</span></label>
+                        </div>
+
+                        <div class="xyicon-input-group">
+                            <input  validate-required id="username" name="username" type="text" class="xyicon-input-field" data-ng-model="confirmData.LoginID">
+                            <span class="xyicon-input-field-bar"></span>
+                            <label class="label-sa" for="username">User Name <span style="color:red;">*</span></label>
+                        </div>
+                        <div class="xyicon-input-group">
+                            <input validate-password id="password" name="password" type="password" class="xyicon-input-field" data-ng-model="confirmData.Password">
+                            <span class="xyicon-input-field-bar"></span>
+                            <label class="label-sa" for="password">Password <span style="color:red;">*</span></label>
+                        </div>
+                        <div class="xyicon-input-group">
+                            <input validate-password-match="confirmData.Password" validate-on="keyup" id="passwordConfirm" name="passwordConfirm" type="password" class="xyicon-input-field" data-ng-model="confirmData.ConfirmPassword">
+                            <span class="xyicon-input-field-bar"></span>
+                            <label class="label-sa" for="passwordConfirm">Confirm <span style="color:red;">*</span></label>
+                        </div>
+
+                        <div class="LoginContainer">
+                            <ui-button-submit validate-submit data-ng-disabled="loading"  data-ng-click="completeSignUp()" text="SUBMIT" ></ui-button-submit>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="footer" data-ng-show="!session.token.isAuth">
+    <img src="{{img_url}}/Content/images/Xyicon_Logo_81by55.png" id="footerLogo" />
+    &#0169; 2000-2015 Xyicon
+</div>
+
+
+
+<style scoped>
+    body {
+        background-color: #f7f7f7;
+    }
+    html {
+        background: url("/Content/images/background_image.png");
+        background-size: 100% 100%;
+    }
+
+</style>

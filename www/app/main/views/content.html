@@ -1,0 +1,6 @@
+<div class="container-fluid main-content">
+    <div id="contentWrapper">
+        <!--<tabbed-holder id="tabHolder" ng-show="authentication.isAuth"></tabbed-holder>-->
+        <div ng-show="session.token.isAuth" ui-view="srAuthContent" style="height: 100%"></div>
+    </div>
+</div>

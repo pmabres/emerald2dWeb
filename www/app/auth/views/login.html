@@ -1,0 +1,48 @@
+﻿<div id="login">
+    <!--<div class="header"><p>SpaceRunner</p></div>-->
+    <div data-ng-show="session.token.isAuth" class="row-fluid home-login" >
+    </div>
+
+    <div  class="row-fluid home-login">
+        <div class="col-md-8 col-md-offset-2 text-center">
+            <!--<div class="homeLogin text-center"></div>-->
+            <div class="box-login">
+                <div class="loginSuperContainer">
+                <div class="spaceRunnerLogo"></div> <!--<img src="{{img_url}}/Content/images/SpaceRunnerLogoMedium.svg" />-->
+                <form class="form-login clearfix" role="form" name="formLogin" validate-group novalidate>
+                    <div class="LoginContainer">
+                        <div loader="login"></div>
+                        <h4 class="form-login-heading">Login</h4><br>
+                        <div class="xyicon-input-group">
+                            <input id="userName" name="userName" type="text" class="xyicon-input-field" placeholder="Username" data-ng-model="loginData.userName" autofocus>
+                            <span class="xyicon-input-field-bar"></span>
+                        </div>
+
+                        <div class="xyicon-input-group">
+                            <input style="margin-bottom:0px;" id="pwInput" name="pwInput" type="password" class="xyicon-input-field" placeholder="Password" data-ng-model="loginData.password" autocomplete="off">
+                            <span class="xyicon-input-field-bar"></span>
+                        </div>
+                        <div class="LoginContainer">
+                            <button name="submit" class="btn btn-home btn-xs btn-block" type="submit" data-ng-click="login()" id="LoginButton">LOGIN</button>
+                            <a href="#/auth/forgotPassword">Need help logging in?</a>
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" data-ng-show="!session.token.isAuth">
+        <img src="{{img_url}}/Content/images/Xyicon_Logo_81by55.png" id="footerLogo" />
+        &#0169; 2000-2015 Xyicon
+    </div>
+
+</div>

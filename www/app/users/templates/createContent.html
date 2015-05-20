@@ -1,0 +1,12 @@
+<div loader="userCreate"></div>
+<div validate-group>
+    <div class="row">
+        <div class="xyicon-input-group">
+            <h5>Email Address</h5><br>
+            <input validate-email name="userEmail" type="email" class="xyicon-input-field" placeholder="Email" data-ng-model="userCreate.data.Email" required autofocus>
+        </div>
+    </div>
+    <roles-template></roles-template>
+    <ui-button-submit data-ng-click="userCreate.save($event)" text="Save"></ui-button-submit>
+    <ui-button data-ng-click="userCreate.cancel($event)" text="Cancel"></ui-button>
+</div>

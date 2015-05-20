@@ -1,0 +1,24 @@
+﻿<div class="usersContainer" authorize="user" unauth-redirect="permissionDenied">
+    <feature-header name="Users"></feature-header>
+    <div class="usersGrid" authorize="user">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="grid-header">
+                    <span columns-manager></span>
+                    <span class="btn-list text-right" style="float:right ">
+                        <!--<span authorize="user" permission="edit" class="k-icon k-i-edit" user-export="userObj.grid"></span>-->
+                        <ui-button-icon authorize="user" permission="edit"  icon="edit"  button-class="headerButton" auth-show unauth-hide user-edit="getSelectedGridItem(this,userObj.grid)" template-if="getSelectedGridItem(this,userObj.grid)"  user-edit-do="userObj.refresh(result)"></ui-button-icon>
+                        <ui-button-icon authorize="user" permission="delete" icon="delete"  button-class="headerButton" auth-show unauth-hide user-delete="getSelectedGridItem(this,userObj.grid)" template-if="getSelectedGridItem(this,userObj.grid)" user-delete-do="userObj.refresh(result)" ></ui-button-icon>
+                        <ui-button-icon authorize="user" permission="add" icon="create" button-class="headerButton" auth-show unauth-hide user-create="" user-create-do="userObj.refresh(result)" ></ui-button-icon>
+                        <!--<ui-button-icon authorize="user" permission="edit" ng-click='kendo.edit.window.actions.open(this)' icon="edit" button-class="headerButton" auth-show unauth-hide></ui-button-icon>-->
+                        <!--<ui-button-icon authorize="user" permission="add" ng-click='kendo.delete.actions.delete(this)' icon="delete"  button-class="headerButton" auth-show unauth-hide></ui-button-icon>-->
+                        <!--<ui-button-icon authorize="user" permission="delete" ng-click='kendo.create.window.actions.open(this)' icon="create" button-class="headerButton" auth-show unauth-hide></ui-button-icon>-->
+                    </span>
+                </div>
+                <div class="grid-body">
+                    <div user-view="userObj" authorize="user" permission="read"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

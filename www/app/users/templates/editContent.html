@@ -1,0 +1,18 @@
+<div loader="userEdit"></div>
+<div validate-group>
+    <fieldset data-ng-disabled="editingAccountOwner">
+        <div class="row">
+            <div ng-show="userEdit.data.EmailVerified" class="xyicon-input-group">
+                <label class="subheader">{{userEdit.data.FirstName}} {{userEdit.data.LastName}} ({{userEdit.data.Email}})</label>
+                <h4 data-ng-show="editingAccountOwner">This user is the account owner - roles for the account owner may not be modified.</h4>
+            </div>
+            <div ng-show="!userEdit.data.EmailVerified" class="xyicon-input-group">
+                <label class="subheader">{{userEdit.data.Email}}</label> -
+                <a href ng-click="userEdit.sendConfirmationEmail(this)" class="resend-email-link">Resend Invitation</a>
+            </div>
+        </div>
+        <roles-template></roles-template>
+    </fieldset>
+    <ui-button-submit data-ng-click="userEdit.save($event)" text="Save"></ui-button-submit>
+    <ui-button data-ng-click="userEdit.cancel($event)" text="Cancel"></ui-button>
+</div>

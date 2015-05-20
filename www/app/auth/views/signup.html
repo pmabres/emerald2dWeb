@@ -1,0 +1,19 @@
+﻿<form class="form-login" role="form" name="signupForm" validate-group novalidate>
+    <h2 class="form-login-heading">Sign up</h2>
+    <div class="xyicon-input-group">
+        <input id="email" name="email" validate-email type="email" class="xyicon-input-field" placeholder="Email" data-ng-model="registration.Email">
+        <span class="xyicon-input-field-bar"></span>
+        <label class="label-sa" for="email">E-mail</label>
+    </div>
+    <div class="xyicon-input-group">
+        <input id="FirstName" name="FirstName" validate-required type="text" class="xyicon-input-field" placeholder="First Name" data-ng-model="registration.FirstName">
+        <span class="xyicon-input-field-bar"></span>
+        <label class="label-sa" for="FirstName">First Name</label>
+    </div>
+    <div class="xyicon-input-group">
+        <input id="LastName" name="LastName" validate-required type="text" class="xyicon-input-field" placeholder="Last Name" data-ng-model="registration.LastName">
+        <span class="xyicon-input-field-bar"></span>
+        <label class="label-sa" for="LastName">Last Name</label>
+    </div>
+    <ui-button-submit validate-submit data-ng-disabled="loading" name="submit" data-ng-click="signUp()" text="Submit"></ui-button-submit>
+</form>

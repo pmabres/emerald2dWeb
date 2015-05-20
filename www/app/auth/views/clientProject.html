@@ -1,0 +1,20 @@
+<div id="selectClientProject">
+    <select  kendo-drop-down-list
+             data-ng-model="selectedClient"
+             id="comboClients"
+             kendo-drop-down-list="clientEditList"
+             k-data-text-field="'Name'"
+             k-data-value-field="'ClientID'"
+             k-data-source="clientList">
+    </select>
+    <select data-ng-show="currentProjectList.length>0"
+            kendo-drop-down-list
+            data-ng-model="selectedProject"
+            id="comboProjects"
+            kendo-drop-down-list="projectEditList"
+            k-data-text-field="'Name'"
+            k-data-value-field="'ProjectID'"
+            k-data-source="currentProjectList">
+    </select>
+    <ui-button ng-click='saveClientProject(this)' text="Apply"></ui-button>
+</div>
