@@ -1,4 +1,7 @@
 # emerald2d
+[![Build Status](https://travis-ci.org/pmabres/emerald2dWeb.svg?branch=master)](https://travis-ci.org/pmabres/emerald2dWeb)
+[![Dependencies](https://david-dm.org/pmabres/emerald2dweb.svg)](https://david-dm.org/pmabres/emerald2dweb)
+
 Javascript framework for 2d Games
 
 Hello and thanks for reading. (If anyone does read this...)
